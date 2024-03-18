@@ -81,6 +81,7 @@ public:
 	MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	{
 		CreateControls();
+		Bind(wxEVT_CLOSE_WINDOW, &MainFrame::Onclose, this);
 		// place functions for elements
 	}
 	string loadFile()
